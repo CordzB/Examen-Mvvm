@@ -1,0 +1,97 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen_Mvvm.MainPage"
+             Title="Calculadora de Descuento"
+             BackgroundColor="WhiteSmoke">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Producto 1 -->
+            <Label Text="Producto 1" FontSize="20" TextColor="#000000" />
+            <Entry Text="{Binding Producto1, Mode=TwoWay}" 
+                   Placeholder="Ingresa el valor del Producto 1"
+                   Keyboard="Numeric"
+                   BackgroundColor="PeachPuff"
+                   TextColor="#000000"
+                   FontSize="18"
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            <!-- Producto 2 -->
+            <Label Text="Producto 2" FontSize="20" TextColor="#000000" />
+            <Entry Text="{Binding Producto2, Mode=TwoWay}" 
+                   Placeholder="Ingresa el valor del Producto 2"
+                   Keyboard="Numeric"
+                   BackgroundColor="PeachPuff"
+                   TextColor="#000000"
+                   FontSize="18"
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            <!-- Producto 3 -->
+            <Label Text="Producto 3" FontSize="20" TextColor="#000000" />
+            <Entry Text="{Binding Producto3, Mode=TwoWay}" 
+                   Placeholder="Ingresa el valor del Producto 3"
+                   Keyboard="Numeric"
+                   BackgroundColor="PeachPuff"
+                   TextColor="#000000"
+                   FontSize="18"
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            <!-- Subtotal -->
+            <Label Text="Subtotal" FontSize="20" TextColor="#000000" />
+            <Entry Text="{Binding Subtotal, Mode=OneWay}" 
+                   IsReadOnly="True"
+                   BackgroundColor="#E8F5E9"
+                   TextColor="#000000"
+                   FontSize="18"
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            <!-- Descuento -->
+            <Label Text="Descuento" FontSize="20" TextColor="#000000" />
+            <HorizontalStackLayout Spacing="10">
+                <Entry Text="{Binding Descuento, Mode=OneWay}" 
+                       IsReadOnly="True"
+                       BackgroundColor="#FFF9C4"
+                       TextColor="#000000"
+                       FontSize="18"
+                       HeightRequest="50"
+                       WidthRequest="150"/>
+                <Label Text="{Binding TipoDescuento}" 
+                       FontSize="18"
+                       TextColor="#000000"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Total a pagar -->
+            <Label Text="Total a Pagar" FontSize="20" TextColor="#000000" />
+            <Entry Text="{Binding Total, Mode=OneWay}" 
+                   IsReadOnly="True"
+                   BackgroundColor="#E3F2FD"
+                   TextColor="#000000"
+                   FontSize="18"
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            <!-- Botones -->
+            <Button Text="Calcular" 
+                    Command="{Binding CalcularCommand}" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    FontSize="18" 
+                    CornerRadius="10" 
+                    HeightRequest="50" />
+            <Button Text="Limpiar" 
+                    Command="{Binding LimpiarCommand}" 
+                    BackgroundColor="#F44336" 
+                    TextColor="White" 
+                    FontSize="18" 
+                    CornerRadius="10" 
+                    HeightRequest="50" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
