@@ -3,7 +3,7 @@
              x:Class="Examen_Mvvm.MainPage"
              Title="Calculadora de Descuento"
              BackgroundColor="WhiteSmoke">
-
+    
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
